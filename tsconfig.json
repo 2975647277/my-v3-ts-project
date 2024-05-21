@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "baseUrl": "./",  // 这里需要配置
+    "paths": { "vue-router": [ "node_modules/vue-router/dist/vue-router.d.ts" ], "@/*": ["./src/*"]},
+    "typeRoots": ["./node_modules/@types", "./types"],
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+
+  // 这里需要配置
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "./auto-imports.d.ts"],// 引入这行代码
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
